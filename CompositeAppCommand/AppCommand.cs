@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Input;
 using System.Windows.Markup;
-using System.Xaml;
 
 namespace CompositeAppCommand
 {
@@ -35,9 +34,8 @@ namespace CompositeAppCommand
         {
             if (Name == null)
             {
-                throw new InvalidOperationException("Cannot use _commands extension without setting Name.");
+                throw new InvalidOperationException("Cannot use command without setting Name.");
             }
-            //var rootObject = ((IRootObjectProvider) serviceProvider).RootObject;
             return CompositeAppCommand.GetCommand(Name, Family);
         }
 

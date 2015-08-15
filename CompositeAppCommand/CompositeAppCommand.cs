@@ -18,6 +18,11 @@ namespace CompositeAppCommand
         {
             return string.IsNullOrWhiteSpace(name) ? null : $"{family}::{name}";
         }
+        
+        private static void Command_CanExecuteChanged(object sender, System.EventArgs e)
+        {
+            CommandManager.InvalidateRequerySuggested();
+        }
 
         internal static CompositeAppCommand GetCommand(string name, string family)
         {
@@ -84,9 +89,5 @@ namespace CompositeAppCommand
             }
         }
 
-        private void Command_CanExecuteChanged(object sender, System.EventArgs e)
-        {
-            CommandManager.InvalidateRequerySuggested();
-        }
     }
 }

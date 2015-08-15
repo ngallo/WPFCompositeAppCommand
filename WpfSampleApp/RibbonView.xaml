@@ -22,6 +22,14 @@
                     <fluent:Button Command="{compositeAppCommand:AppCommand Name=CMD2, Family=Group2}" CommandParameter="Shell4">CMD2</fluent:Button>
                 </fluent:RibbonGroupBox>
             </fluent:RibbonTabItem>
+            <fluent:RibbonTabItem Header="AppCommands 2"
+                                  KeyTip="L"
+                                  Group="{Binding ElementName=tabGroup2, Mode=OneWay}">
+                <fluent:RibbonGroupBox Header="Group1" IsLauncherVisible="False">
+                    <fluent:Button Command="{compositeAppCommand:AppCommand Name=CMD1, Family=Group1}" CommandParameter="Shell1">CMD1</fluent:Button>
+                    <fluent:Button Command="{compositeAppCommand:AppCommand Name=CMD2, Family=Group1}" CommandParameter="Shell2">CMD2</fluent:Button>
+                </fluent:RibbonGroupBox>
+            </fluent:RibbonTabItem>
         </fluent:Ribbon>
     </Grid>
 </UserControl>

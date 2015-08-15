@@ -20,6 +20,7 @@ namespace WpfModuleB
             AddCommand = new DelegateCommand<object>(Save, CanSave);
             CompositeAppCommand.CompositeAppCommand.RegisterCommand(this, AddCommand, "CMD1", "Group1");
             CompositeAppCommand.CompositeAppCommand.RegisterCommand(this, AddCommand, "CMD1", "Group2");
+            CompositeAppCommand.CompositeAppCommand.RegisterCommand(this, AddCommand, "CMD2", "Group2");
         }
 
         //Properties
