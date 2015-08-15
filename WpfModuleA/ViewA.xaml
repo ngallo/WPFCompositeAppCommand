@@ -13,7 +13,10 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Text="View A" FontSize="20" Foreground="White"></TextBlock>
+            <StackPanel  Grid.Row="0">
+                <TextBlock Text="View A" FontSize="20" Foreground="White"></TextBlock>
+                <CheckBox IsChecked="{Binding IsActive, Mode=TwoWay}">Active</CheckBox>
+            </StackPanel>
             <Button Grid.Row="1" Command="{Binding AddCommand}" CommandParameter="ViewA" Content="Command ViewA"/>
             <TextBox Grid.Row="2" IsReadOnly="True" Text="{Binding Text, Mode=OneWay}" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
         </Grid>

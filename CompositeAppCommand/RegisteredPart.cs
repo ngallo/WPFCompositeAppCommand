@@ -3,7 +3,7 @@ using System.Windows.Input;
 
 namespace CompositeAppCommand
 {
-    internal class RegisteredPart
+    internal class RegisteredPart : IDisposable
     {
         //Constructors
 
@@ -19,9 +19,16 @@ namespace CompositeAppCommand
 
         //Properties
 
-        public object Owner { get; }
+        public object Owner { get; private set; }
 
-        public ICommand Command { get; }
+        public ICommand Command { get; private set; }
 
+        //Methods
+
+        public void Dispose()
+        {
+            Owner = null;
+            Command = null;
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Input;
 
 namespace CompositeAppCommand
@@ -27,12 +28,7 @@ namespace CompositeAppCommand
         public bool CanExecute(object parameter)
         {
             var parts = _registeredParts.ToArray();
-            var canExecute = true;
-            foreach (var part in parts)
-            {
-                canExecute = canExecute && part.Command.CanExecute(parameter);
-            }
-            return canExecute;
+            return parts.Length != 0 && parts.Aggregate(true, (current, part) => current && part.Value.Command.CanExecute(parameter));
         }
 
         public void Execute(object parameter)
@@ -40,7 +36,7 @@ namespace CompositeAppCommand
             var parts = _registeredParts.ToArray();
             foreach (var part in parts)
             {
-                part.Command.Execute(parameter);
+                part.Value.Command.Execute(parameter);
             }
         }
 
