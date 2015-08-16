@@ -10,7 +10,7 @@ namespace CompositeCommandLib
         //Fields
 
         private static readonly Dictionary<string, CompositeAppCommand> Commands = new Dictionary<string, CompositeAppCommand>();
-        private readonly Dictionary<object, IList<ICommand>> _composisteParts = new Dictionary<object, IList<ICommand>>();
+        private readonly Dictionary<object, IList<ICommand>> _compositeParts = new Dictionary<object, IList<ICommand>>();
 
         //Methods
 
@@ -76,13 +76,13 @@ namespace CompositeCommandLib
 
         private void RegisterCommand(object owner, ICommand command)
         {
-            lock (_composisteParts)
+            lock (_compositeParts)
             {
-                if (!_composisteParts.ContainsKey(owner))
+                if (!_compositeParts.ContainsKey(owner))
                 {
-                    _composisteParts.Add(owner, new List<ICommand>());
+                    _compositeParts.Add(owner, new List<ICommand>());
                 }
-                var commands = _composisteParts[owner];
+                var commands = _compositeParts[owner];
                 commands.Add(command);
                 RegisterCommand(command);
             }
@@ -90,13 +90,13 @@ namespace CompositeCommandLib
 
         private void UnregisterCommand(object owner)
         {
-            lock (_composisteParts)
+            lock (_compositeParts)
             {
-                if (!_composisteParts.ContainsKey(owner))
+                if (!_compositeParts.ContainsKey(owner))
                 {
                     return;
                 }
-                var commands = _composisteParts[owner];
+                var commands = _compositeParts[owner];
                 if (commands != null)
                 {
                     foreach (var command in commands)
@@ -104,7 +104,7 @@ namespace CompositeCommandLib
                         UnregisterCommand(command);
                     }
                 }
-                _composisteParts.Remove(owner);
+                _compositeParts.Remove(owner);
             }
         }
 
