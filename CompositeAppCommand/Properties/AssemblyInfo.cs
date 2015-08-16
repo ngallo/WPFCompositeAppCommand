@@ -36,3 +36,4 @@ using System.Windows.Markup;
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
 [assembly: XmlnsDefinition("https://schema.github.com/ngallo", "CompositeAppCommand")]
+[assembly: XmlnsDefinition("https://schema.github.com/ngallo", "CompositeAppCommand.MarkupExtensions")]

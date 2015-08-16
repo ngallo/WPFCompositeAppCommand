@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:WpfSampleApp"
              xmlns:fluent="urn:fluent-ribbon"
              xmlns:compositeAppCommand="https://schema.github.com/ngallo"
+             xmlns:markupExtensions="clr-namespace:CompositeAppCommand.MarkupExtensions;assembly=CompositeAppCommand"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
@@ -14,20 +15,20 @@
                                   KeyTip="L"
                                   Group="{Binding ElementName=tabGroup2, Mode=OneWay}">
                 <fluent:RibbonGroupBox Header="Group1" IsLauncherVisible="False">
-                    <fluent:Button Command="{compositeAppCommand:AppCommand Name=CMD1, Family=Group1}" CommandParameter="Shell1">CMD1</fluent:Button>
-                    <fluent:Button Command="{compositeAppCommand:AppCommand Name=CMD2, Family=Group1}" CommandParameter="Shell2">CMD2</fluent:Button>
+                    <fluent:Button Command="{markupExtensions:AppCommand Name=CMD1, Family=Group1}" CommandParameter="Shell1">CMD1</fluent:Button>
+                    <fluent:Button Command="{markupExtensions:AppCommand Name=CMD2, Family=Group1}" CommandParameter="Shell2">CMD2</fluent:Button>
                 </fluent:RibbonGroupBox>
                 <fluent:RibbonGroupBox Header="Group2" IsLauncherVisible="False">
-                    <fluent:Button Command="{compositeAppCommand:AppCommand Name=CMD1, Family=Group2}" CommandParameter="Shell3">CMD1</fluent:Button>
-                    <fluent:Button Command="{compositeAppCommand:AppCommand Name=CMD2, Family=Group2}" CommandParameter="Shell4">CMD2</fluent:Button>
+                    <fluent:Button Command="{markupExtensions:AppCommand Name=CMD1, Family=Group2}" CommandParameter="Shell3">CMD1</fluent:Button>
+                    <fluent:Button Command="{markupExtensions:AppCommand Name=CMD2, Family=Group2}" CommandParameter="Shell4">CMD2</fluent:Button>
                 </fluent:RibbonGroupBox>
             </fluent:RibbonTabItem>
             <fluent:RibbonTabItem Header="AppCommands 2"
                                   KeyTip="L"
                                   Group="{Binding ElementName=tabGroup2, Mode=OneWay}">
                 <fluent:RibbonGroupBox Header="Group1" IsLauncherVisible="False">
-                    <fluent:Button Command="{compositeAppCommand:AppCommand Name=CMD1, Family=Group1}" CommandParameter="Shell1">CMD1</fluent:Button>
-                    <fluent:Button Command="{compositeAppCommand:AppCommand Name=CMD2, Family=Group1}" CommandParameter="Shell2">CMD2</fluent:Button>
+                    <fluent:Button Command="{markupExtensions:AppCommand Name=CMD1, Family=Group1}" CommandParameter="Shell1">CMD1</fluent:Button>
+                    <fluent:Button Command="{markupExtensions:AppCommand Name=CMD2, Family=Group1}" CommandParameter="Shell2">CMD2</fluent:Button>
                 </fluent:RibbonGroupBox>
             </fluent:RibbonTabItem>
         </fluent:Ribbon>
