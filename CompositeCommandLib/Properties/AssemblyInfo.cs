@@ -5,11 +5,11 @@ using System.Windows.Markup;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CompositeAppCommand")]
+[assembly: AssemblyTitle("ExCompositeAppCommand")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CompositeAppCommand")]
+[assembly: AssemblyProduct("ExCompositeAppCommand")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -35,5 +35,5 @@ using System.Windows.Markup;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
-[assembly: XmlnsDefinition("https://schema.github.com/ngallo", "CompositeAppCommand")]
-[assembly: XmlnsDefinition("https://schema.github.com/ngallo", "CompositeAppCommand.MarkupExtensions")]
+[assembly: XmlnsDefinition("https://schema.github.com/ngallo", "CompositeCommandLib")]
+[assembly: XmlnsDefinition("https://schema.github.com/ngallo", "CompositeCommandLib.MarkupExtensions")]

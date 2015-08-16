@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfModuleA", "WpfModuleA\Wp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfModuleB", "WpfModuleB\WpfModuleB.csproj", "{C0DB3397-27EB-488F-8D2D-25439B82618F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeAppCommand", "CompositeAppCommand\CompositeAppCommand.csproj", "{4957F7A7-736B-416D-923C-972A8DF34025}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositeCommandLib", "CompositeCommandLib\CompositeCommandLib.csproj", "{4957F7A7-736B-416D-923C-972A8DF34025}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

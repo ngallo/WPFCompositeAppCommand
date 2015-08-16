@@ -157,9 +157,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CompositeAppCommand\CompositeAppCommand.csproj">
+    <ProjectReference Include="..\CompositeCommandLib\CompositeCommandLib.csproj">
       <Project>{4957f7a7-736b-416d-923c-972a8df34025}</Project>
-      <Name>CompositeAppCommand</Name>
+      <Name>CompositeCommandLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\WpfModuleA\WpfModuleA.csproj">
       <Project>{623a1d94-fd3a-4894-b034-967c402487a0}</Project>

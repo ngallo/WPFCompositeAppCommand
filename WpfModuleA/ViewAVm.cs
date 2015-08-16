@@ -1,4 +1,5 @@
-﻿using Microsoft.Practices.Prism.Commands;
+﻿using CompositeCommandLib;
+using Microsoft.Practices.Prism.Commands;
 using Microsoft.Practices.Prism.Mvvm;
 using System;
 using System.Text;
@@ -18,7 +19,7 @@ namespace WpfModuleA
         public ViewAVm()
         {
             AddCommand = new DelegateCommand<object>(Save, CanSave);
-            CompositeAppCommand.CompositeAppCommand.RegisterCommand(this, AddCommand, "CMD1", "Group1");
+            CompositeAppCommand.RegisterCommand(this, AddCommand, "CMD1", "Group1");
         }
 
         //Properties

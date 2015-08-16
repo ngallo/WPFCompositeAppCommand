@@ -2,7 +2,7 @@
 using System.Windows.Input;
 using System.Windows.Markup;
 
-namespace CompositeAppCommand.MarkupExtensions
+namespace CompositeCommandLib.MarkupExtensions
 {
     [MarkupExtensionReturnType(typeof(ICommand))]
     public class AppCommand : MarkupExtension

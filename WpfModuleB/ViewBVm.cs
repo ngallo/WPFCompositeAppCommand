@@ -1,7 +1,8 @@
-﻿using System;
-using System.Text;
+﻿using CompositeCommandLib;
 using Microsoft.Practices.Prism.Commands;
 using Microsoft.Practices.Prism.Mvvm;
+using System;
+using System.Text;
 
 namespace WpfModuleB
 {
@@ -18,9 +19,9 @@ namespace WpfModuleB
         public ViewBVm()
         {
             AddCommand = new DelegateCommand<object>(Save, CanSave);
-            CompositeAppCommand.CompositeAppCommand.RegisterCommand(this, AddCommand, "CMD1", "Group1");
-            CompositeAppCommand.CompositeAppCommand.RegisterCommand(this, AddCommand, "CMD1", "Group2");
-            CompositeAppCommand.CompositeAppCommand.RegisterCommand(this, AddCommand, "CMD2", "Group2");
+            CompositeAppCommand.RegisterCommand(this, AddCommand, "CMD1", "Group1");
+            CompositeAppCommand.RegisterCommand(this, AddCommand, "CMD1", "Group2");
+            CompositeAppCommand.RegisterCommand(this, AddCommand, "CMD2", "Group2");
         }
 
         //Properties
