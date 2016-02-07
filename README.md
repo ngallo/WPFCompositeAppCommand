@@ -1,2 +1,2 @@
-# WPF_CompositeAppCommand
+# WPFCompositeAppCommand
 WPF - Composite Application Command
